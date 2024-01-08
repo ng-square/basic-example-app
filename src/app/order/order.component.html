@@ -1,0 +1,40 @@
+<bal-list border="true">
+    @for(pizza of order?.pizzas; track pizza.id) {
+        <bal-list-item>
+            <bal-list-item-content>
+                <bal-list-item-title>{{pizza.name}}</bal-list-item-title>
+                <bal-list-item-subtitle>CHF {{pizza.price}}</bal-list-item-subtitle>
+            </bal-list-item-content>
+        </bal-list-item>
+    }
+</bal-list>
+
+@if(form) {
+    <bal-form [formGroup]="form">
+        <bal-form-grid>
+            <bal-form-col size="half">
+                <bal-field>
+                    <bal-field-label>Name</bal-field-label>
+                    <bal-field-control>
+                        <bal-input formControlName="name" placeholder="Enter your name"></bal-input>
+                    </bal-field-control>
+                    <bal-field-message color="danger">
+                        <bal-ng-error controlName="name" error="required">Please enter a name</bal-ng-error>
+                    </bal-field-message>
+                </bal-field>
+            </bal-form-col>
+            <bal-form-col size="half">
+                <bal-field>
+                    <bal-field-label>Address</bal-field-label>
+                    <bal-field-control>
+                        <bal-input formControlName="address" placeholder="Enter your address"></bal-input>
+                    </bal-field-control>
+                    <bal-field-message color="danger">
+                        <bal-ng-error controlName="address" error="required">Please enter a address</bal-ng-error>
+                    </bal-field-message>
+                </bal-field>
+            </bal-form-col>
+        </bal-form-grid>
+    </bal-form>
+    <bal-button (click)="submitOrder()">Submit</bal-button>
+}

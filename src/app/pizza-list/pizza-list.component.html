@@ -1,1 +1,18 @@
-<p>pizza-list works!</p>
+<div class="columns is-multiline">
+    @for(pizza of (pizzas | async); track pizza.id) {
+        <div class="column is-one-third">
+            <basic-example-app-pizza-list-item [pizza]="pizza" (order)="changeOrder($event)"></basic-example-app-pizza-list-item>
+        </div>
+    } @empty {
+        <div class="column">No pizzas available.</div>
+    }
+</div>
+
+
+<bal-heading level="h2" space="bottom">Order</bal-heading>
+
+@if(order()) {
+    <basic-example-app-order [order]="order()" (submit)="submitOrder()"></basic-example-app-order>
+} @else {
+    <p>Nothing ordered yet.</p>
+}

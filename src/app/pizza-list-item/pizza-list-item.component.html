@@ -1,1 +1,9 @@
-<p>pizza-list-item works!</p>
+<bal-card>
+    <bal-card-title>{{pizza?.name}}</bal-card-title>
+    <bal-card-content>
+        {{pizza?.description}}
+    </bal-card-content>
+    <bal-card-actions>
+        <bal-button (click)="order.emit(pizza)">Order (CHF {{pizza?.price}}.-)</bal-button>
+      </bal-card-actions>
+</bal-card>

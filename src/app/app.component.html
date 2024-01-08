@@ -1,2 +1,13 @@
-<basic-example-app-pizza-list></basic-example-app-pizza-list>
-<router-outlet></router-outlet>
+<bal-app class="has-sticky-footer">
+    <header>
+        <bal-navbar>
+            <bal-navbar-brand>Pizza</bal-navbar-brand>
+        </bal-navbar>
+    </header>
+    <main>
+        <div class="container my-large">
+            <router-outlet></router-outlet>
+        </div>
+    </main>
+    <bal-footer></bal-footer>
+</bal-app>
