@@ -1,20 +1,20 @@
 import { Component, OnInit, Signal, WritableSignal, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { PizzaListItemComponent } from '../pizza-list-item/pizza-list-item.component';
+import { PizzaListItemComponent } from './pizza-list-item/pizza-list-item.component';
 import { Order, Pizza } from '../model';
 import { BalHeading } from '@baloise/design-system-components-angular/standalone';
 import { PizzaService } from '../pizza.service';
 import { Observable } from 'rxjs';
-import { OrderComponent } from '../order/order.component';
+import { OrderComponent } from './order/order.component';
 
 @Component({
-  selector: 'basic-example-app-pizza-list',
+  selector: 'basic-example-app-pizza-shop',
   standalone: true,
   imports: [CommonModule, PizzaListItemComponent, BalHeading, OrderComponent],
-  templateUrl: './pizza-list.component.html',
-  styleUrl: './pizza-list.component.scss',
+  templateUrl: './pizza-shop.component.html',
+  styleUrl: './pizza-shop.component.scss',
 })
-export class PizzaListComponent implements OnInit {
+export class PizzaShopComponent implements OnInit {
 
   constructor(private pizzaService: PizzaService) {}
 

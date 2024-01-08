@@ -1,7 +1,7 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BalButtonBundle, BalCardBundle, BalLayoutBundle } from '@baloise/design-system-components-angular/standalone';
-import { Pizza } from '../model';
+import { Pizza } from '../../model';
 
 @Component({
   selector: 'basic-example-app-pizza-list-item',

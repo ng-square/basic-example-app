@@ -1,6 +1,6 @@
 import { CUSTOM_ELEMENTS_SCHEMA, Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Order } from '../model';
+import { Order } from '../../model';
 import { BalFormBundle, BalListBundle } from '@baloise/design-system-components-angular/standalone';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 
